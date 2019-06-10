@@ -71,6 +71,7 @@ export default (Component, options) => {
         selectAll,
         selectType,
         selectWidth,
+        selectStyle,
         SelectAllInputComponent,
         SelectInputComponent,
         ...rest
@@ -86,7 +87,7 @@ export default (Component, options) => {
         filterable: false,
         sortable: false,
         resizable: false,
-        style: { textAlign: 'center' },
+        style: selectStyle || { textAlign: 'center' },
       }
 
       const columns = (options !== undefined && options.floatingLeft === true) ? [...originalCols, select] : [select, ...originalCols]
